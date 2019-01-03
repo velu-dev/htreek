@@ -1,0 +1,43 @@
+<ion-content padding class="animated slideInDown login auth-page">
+    <div class="container login-content">
+  
+      <!-- Logo -->
+      <div padding-horizontal text-center class="animated fadeInDown">
+        <div class="logo">
+          <!-- test -->
+          <img src="https://via.placeholder.com/80x80">
+        </div>
+        <h2 ion-text class="text-primary">
+          <strong>PROP</strong>
+        </h2>
+      </div>
+  
+      <!-- Login form -->
+      <!-- <form class="list-form"> -->
+        <ion-item class="login-item  animated fadeInDown">
+          <ion-label floating class="login-label">
+            <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+            Email
+          </ion-label>
+          <ion-input style="padding-left: 10px;" type="email" name="username" [(ngModel)]="data.username"></ion-input>
+        </ion-item>
+  
+        <ion-item class="login-item  animated fadeInDown">
+          <ion-label floating class="login-label">
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Password
+          </ion-label>
+          <ion-input style="padding-left: 10px;" type="password" name="password" [(ngModel)]="data.password"></ion-input>
+        </ion-item>
+      <!-- </form> -->
+      <p text-right ion-text style="color: #fff" tappable (click)="forgotPass()"><strong>Forgot Password?</strong></p>
+  
+      <div>
+          <button ion-button   color="buttonColor" icon-start block tappable round (click)="login()" class="login-button  animated fadeInDown">SIGN IN</button>
+        <!-- <button ion-button icon-start block color="dark" tappable (click)="login()">
+          <ion-icon name="log-in"></ion-icon>
+          SIGN IN
+        </button>   -->
+      </div>  
+    </div>
+  </ion-content>

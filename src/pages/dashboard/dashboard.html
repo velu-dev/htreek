@@ -1,0 +1,52 @@
+<ion-header>
+
+    <ion-navbar color="appcolor">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <h2 class="header-title">Dashboard</h2>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button tappable>
+                <ion-icon name="md-log-out"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="animated fadeIn trips detail-bg">
+    <div>
+        <ion-segment class="animated fadeIn delay-5s" color="buttonColor" [(ngModel)]="segmentTab">
+            <ion-segment-button value="posts" no-border>
+                Posts
+            </ion-segment-button>
+            <ion-segment-button value="upcomming" no-border>
+                Up Comming
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div [ngSwitch]="segmentTab" swipeSegment class="swipe-area">
+        <ion-list class="animated fadeInLeft delay-5s" *ngSwitchCase="'posts'" padding>
+            <div class="trip card" margin-bottom>
+                fdhgfdhfhfdhhfdfh
+                <!-- <ion-card>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            Image
+                        </ion-avatar>
+                        <h2 style="margin-top: 0 !important">post.postedBy</h2>
+                        <p>post.date</p>
+                    </ion-item>
+                    <ion-card-header class="dash-title">post.title</ion-card-header>
+                    <ion-card-content class="dash-desc">
+                        <p class="dash-desc">post.description| limitTo :150</p>
+                    </ion-card-content>
+                </ion-card> -->
+            </div>
+        </ion-list>
+        <ion-list class="animated fadeInLeft delay-5s" *ngSwitchCase="'upcomming'" padding>
+            Up Comming
+        </ion-list>
+    </div>
+</ion-content>
